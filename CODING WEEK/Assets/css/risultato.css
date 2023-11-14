@@ -174,7 +174,7 @@ transform: scale(-1, 1);
 }
 
 
-.circular-chart.orange .circle {
+.circular-chart.epicBlue .circle {
   stroke: #00ffff;
   stroke-width: 4;
 }
