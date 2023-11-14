@@ -1,32 +1,49 @@
-const newRate = function (e) {
-    console.log("Heyyy");
+var a = -1;
+const newRate = function (c) {
     const stars_1 = document.getElementById("feedbackStars").children;
     const stars = Array.from(stars_1);
-    a = stars.findIndex((star) => {return star === e.target})
-    for (let i = 0; i<=a; i++) {
-        const feedbackStars = document.getElementById("feedbackStars");
-        const Newstar = document.createElement("img");
-        Newstar.src = "Assets/images/star.svg"
-        Newstar.setAttribute("alt", "stellina");
-        feedbackStars.replaceChild(Newstar, stars[i]);
+    for (let i = 0; i<=c; i++) {
+        stars[i].src = "Assets/images/star.svg";
+        stars[i].alt = "stellina";
     }
-    for (let i = a+1; i<stars.length; i++) {
-        const feedbackStars = document.getElementById("feedbackStars");
-        const Newstar = document.createElement("img");
-        Newstar.src = "Assets/images/blackStar.svg"
-        Newstar.setAttribute("alt", "stellina");
-        feedbackStars.replaceChild(Newstar, stars[i]);
+    for (let i = c+1; i<stars.length; i++) {
+        stars[i].src = "Assets/images/blackStar.svg";
+        stars[i].alt = "stellinaNera";
     }
-    makeStarsResponsive();
+}
+
+const newMomentaryRate = function (e) {
+    const stars_1 = document.getElementById("feedbackStars").children;
+    const stars = Array.from(stars_1);
+    b = stars.findIndex((star) => {return star === e.target})
+    for (let i = 0; i<=b; i++) {
+        stars[i].src = "Assets/images/star.svg";
+        stars[i].alt = "stellina";
+    }
+    for (let i = b+1; i<stars.length; i++) {
+        stars[i].src = "Assets/images/blackStar.svg";
+        stars[i].alt = "stellinaNera";
+    }
 }
 
 const makeStarsResponsive = function () {
     const stars_1 = document.getElementById("feedbackStars").children;
     const stars = Array.from(stars_1);
     for (let i = 0; i<stars.length; i++) {
-        stars[i].addEventListener("click", newRate);
+        stars[i].addEventListener("click", function (e) {
+            console.log("Heyyy");
+            const stars_1 = document.getElementById("feedbackStars").children;
+            const stars = Array.from(stars_1);
+            a = stars.findIndex((star) => {return star === e.target})
+            newRate(a);
+            console.log(a);
+        });
+        stars[i].addEventListener("mouseover", newMomentaryRate);
+        stars[i].addEventListener("mouseout", function () {
+            console.log("ABB");
+            newRate(a);
+        });
     }
 }
 
 makeStarsResponsive();
-
