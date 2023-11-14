@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+#container {
+    text-align: center;
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    color: #E7E7EB;
+    min-height: 100vh;
+}
+
+header {
+    padding: 40px 70px;
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+#epicodeLogo {
+    width: 140px;
+}
+
+main {
+    width: 65%;
+    margin: auto;
+}
+
+h1 {
+    font-size: 50px;
+    margin: 0;
+}
+
+p {
+    font-size: 26px;
+    margin: 20px 0;
+}
+
+#feedbackStars {
+    margin: 30px 0;
+}
+
+#feedbackStars img {
+    cursor: pointer;
+    width: 7%;
+    max-width: 45px;
+    margin-inline: 1%
+}
+
+#leaveComment {
+    padding: 30px 0 60px;
+}
+
+#comment {
+    background-color: transparent;
+    display: block;
+    color: #E7E7EB;
+    width:100%;
+    border:0;
+    font-size: 100%;
+    border-bottom: 2px solid #D20094;
+    padding: 10px 20px;
+    margin: 40px 0 60px;
+}
+
+#moreInfo {
+    background-color: #00FFFF;
+    color: #0B113B;
+    font-weight: 900;
+    width: 170px;
+    line-height: 3em;
+    font-size: 120%;
+    border: 0;
+    cursor: pointer;
+    box-shadow: 0 0 30px #00FFFF;
+}
