@@ -1,0 +1,119 @@
+body {
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.65;
+    background-color: #666666;
+}
+
+/* Sezione header */
+
+header {
+    display: flex;
+}
+
+header span img {
+    width: 12%;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+header p {
+    position: relative;
+    font-size: 10px;
+    top: -5px;
+    left: 127px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* ++++++++ Timer ++++++++++*/
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
+
+.container {
+    width: 400px;
+    margin-top: -1%;
+}
+
+.path--background {
+    fill: #896293;
+    stroke: #fff;
+    stroke-width: 0px;
+}
+
+.pulse {
+    fill: rgb(255, 74, 74) !important;
+}
+
+.path--foreground {
+    fill: #00ffff;
+    stroke: #00ffff;
+    stroke-width: 2px;
+}
+
+.label {
+    font-size: 30px;
+    font-weight: bold;
+    text-anchor: middle;
+    fill: white;
+}
+
+
+/* sezione domande */
+
+main h1 {
+    text-align: center;
+    color: white;
+    margin-top: 5%;
+    margin-bottom: 3%;
+}
+
+/* Sezione risposte */
+
+
+.risposteMultiple {
+    display: flex;
+    justify-content: center;
+}
+
+.stileDomanda {
+    width: 15%;
+    text-align: center;
+    margin: 10px;
+    background-color: #292a54;
+    padding: 20px;
+    padding-inline: 10%;
+    border-radius: 30px;
+    color: white;
+    box-shadow: -2px -2px 3px white, 1px 0 3px white;
+}
+
+
+/*   ASIDE  */
+
+aside h3 {
+    text-align: center;
+    margin-top: 5%;
+    color: white;
+}
+
+aside h3 span {
+    color: #d20094;
+}
+
+.stileDomanda:hover {
+    background-color: #d20094;
+    cursor:pointer;
+}
+
+.right {
+    background-color:#33be3e !important;
+}
+
+.wrong {
+    background-color: #E60000 !important;
+}
