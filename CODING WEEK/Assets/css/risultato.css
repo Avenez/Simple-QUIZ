@@ -150,7 +150,7 @@ transform: scale(-1, 1);
 }
 
 .chart-text-wrapper b.blue {
-  color: aqua;
+  color: #00ffff;
 }
 
 .single-chart {
