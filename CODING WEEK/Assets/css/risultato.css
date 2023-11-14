@@ -62,23 +62,6 @@ section div:nth-child(3) {
   text-align: right;
 }
 
-.risultato {
-  margin: -1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.ring {
-  width: 150px;
-  height: 150px;
-  border: 10px solid #3498db;
-  border-radius: 50%;
-  word-wrap: break-word;
-  overflow: hidden;
-  text-align: center;
-}
-
 section h3,
 .percentage {
   line-height: 70px;
