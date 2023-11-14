@@ -81,13 +81,6 @@ section h3 {
   font-size: 18px;
 
 }
-
-#a3 {
-  text-wrap:wrap;
-  word-wrap: break-word
-}
-
-
 /* ----------------CERCHIO-------------------- */
 .flip{
 -moz-transform: scale(-1, 1);
