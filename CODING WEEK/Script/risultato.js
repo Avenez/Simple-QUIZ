@@ -1,5 +1,4 @@
-
-let result = 8;
+let result = document.location.search.slice(9,);
 
 const innerText = function(){
     let percentuale = document.getElementById("a4");
