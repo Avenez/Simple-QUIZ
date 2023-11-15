@@ -1,0 +1,100 @@
+/*IMPOSTAZIONI GENERALI*/
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+body{background-image: url(bg.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+width: 100%;
+padding-left: 7%;
+color: white;
+
+}
+span{font-weight: bold;}
+
+/*HEADER*/
+.logo{width: 13%;
+padding-top: 3%;
+padding-bottom: 1.7%;}
+
+/*MAIN*/
+h1{font-family: 'Outfit', sans-serif;
+font-size: 800%;
+line-height: 0.8em;
+font-weight: 200;
+margin-bottom: 3%;
+}
+
+
+/*SECTION*/
+section{font-family: 'Inter', sans-serif;
+padding-bottom:1.5%;
+}
+section h2{color: #C2128D;
+font-size: 350%;
+margin-bottom: 0;
+
+}
+section p{padding-bottom: 2%;
+font-size: 170%;
+margin-top: 0.7%;}
+ul{line-height: 1.7em;
+padding-bottom: 2.5%;
+font-size: 180%;}
+
+/*FOOTER*/
+
+
+
+
+.custom-checkbox {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+   background-image: url(bg.jpg);/* Colore di sfondo*/
+   background-position: center;
+   border: 4px solid white;/* di default;*/
+  }
+  
+  input[type="checkbox"] {
+    display: none; /* Nasconde il checkbox di default */
+  }
+  
+  input[type="checkbox"]:checked + .custom-checkbox {
+    background-image: url(image_processing20200511-10310-15y6mf2.png);/* Cambia il colore di sfondo quando il checkbox è selezionato */
+    background-position: center;
+    background-size: contain;
+  }
+
+  
+
+footer{font-family: 'Inter', sans-serif;
+padding-bottom: 10%;}
+footer p{display: inline;
+font-size: 130%;
+font-weight: 600;
+padding-left: 1em;
+}
+
+button{font-weight: bold;
+    font-size: 1.5em;
+    padding: 0.3em 1.6em;
+    margin-left: 5%;
+    font-weight: bold;
+    font-size: 1.5em;
+background-color: #00FFFF;
+font-size: 250%;
+box-shadow: -1px 0px 20px 20px #00feff4d;
+
+
+}
+
+
+
+
+
+
+
+
