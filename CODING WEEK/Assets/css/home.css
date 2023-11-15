@@ -42,7 +42,6 @@ h2 {
   color: #C2128D;
   font-size: 200%;
   margin-bottom: 0;
-
 }
 
 section p {
@@ -59,6 +58,19 @@ ul {
 
 /*FOOTER*/
 
+form div h3 {
+  color:#00FFFF;
+  border-radius: 50px;
+  padding: 10px;
+  font-size: 180%;
+  font-family: 'Outfit', sans-serif;
+}
+
+div label {
+  font-size: 100%;
+  font-weight: 600;
+}
+
 .contenitore {
   display: flex;
   justify-content: space-between;
@@ -70,12 +82,28 @@ ul {
   padding-top: 25px;
 }
 
+input:hover {
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  appearance: none;
+  width: 20px; /* Imposta la larghezza del radio button */
+  height: 20px; /* Imposta l'altezza del radio button */
+  border: 2px solid #ffffff; /* Aggiunge un bordo */
+  border-radius: 0; /* Rimuove il bordo arrotondato */
+}
+
+input[type="radio"]:checked {
+  background-color: #00FFFF; /* Cambia il colore di sfondo quando è selezionato */
+}
+
 .procedi {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   margin-top: 4em;
   width: 75%;
-  justify-content: space-between;
 }
 
 .align {
@@ -85,10 +113,11 @@ ul {
 
 
 .custom-checkbox {
+  cursor: pointer;
   display: inline-block;
   width: 25px;
   height: 25px;
-  background-image: url(../images/bg.jpg);
+  background-color: #16183e;
   /* Colore di sfondo*/
   background-position: center;
   border: 4px solid white;
