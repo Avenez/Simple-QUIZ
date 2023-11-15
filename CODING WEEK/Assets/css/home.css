@@ -3,7 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
 
-body{background-image: url(../images/bg.jpg);
+body{
+background: rgb(22, 24, 62);
+background: linear-gradient(120deg, rgba(22, 24, 62, 1) 0%, rgba(22, 24, 62, 1) 44%, rgba(91, 41, 103, 1) 52%, rgba(67, 35, 89, 1) 56%, rgba(64, 34, 87, 1) 60%, rgba(110, 46, 115, 1) 67%, rgba(77, 38, 95, 1) 75%, rgba(110, 46, 115, 1) 82%, rgba(101, 44, 110, 1) 84%, rgba(22, 24, 62, 1) 90%);
 background-size: cover;
 background-repeat: no-repeat;
 height: 100%;
@@ -90,11 +92,3 @@ box-shadow: -1px 0px 20px 20px #00feff4d;
 
 
 }
-
-
-
-
-
-
-
-
