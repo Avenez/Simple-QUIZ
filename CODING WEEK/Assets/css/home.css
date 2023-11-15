@@ -3,48 +3,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
 
-body{
-background: rgb(22, 24, 62);
-background: linear-gradient(120deg, rgba(22, 24, 62, 1) 0%, rgba(22, 24, 62, 1) 44%, rgba(91, 41, 103, 1) 52%, rgba(67, 35, 89, 1) 56%, rgba(64, 34, 87, 1) 60%, rgba(110, 46, 115, 1) 67%, rgba(77, 38, 95, 1) 75%, rgba(110, 46, 115, 1) 82%, rgba(101, 44, 110, 1) 84%, rgba(22, 24, 62, 1) 90%);
-background-size: cover;
-background-repeat: no-repeat;
-height: 100%;
-width: 100%;
-padding-left: 7%;
-color: white;
-
+body {
+  background: rgb(22, 24, 62);
+  background: linear-gradient(120deg, rgba(22, 24, 62, 1) 0%, rgba(22, 24, 62, 1) 44%, rgba(91, 41, 103, 1) 52%, rgba(67, 35, 89, 1) 56%, rgba(64, 34, 87, 1) 60%, rgba(110, 46, 115, 1) 67%, rgba(77, 38, 95, 1) 75%, rgba(110, 46, 115, 1) 82%, rgba(101, 44, 110, 1) 84%, rgba(22, 24, 62, 1) 90%);
+  height: 100%;
+  width: 100%;
+  padding-left: 7%;
+  color: white;
 }
-span{font-weight: bold;}
+
+span {
+  font-weight: bold;
+}
 
 /*HEADER*/
-.logo{width: 13%;
-padding-top: 3%;
-padding-bottom: 1.7%;}
+.logo {
+  width: 15%;
+  margin-top: 2%;
+  margin-bottom: 2.5%;
+}
 
 /*MAIN*/
-h1{font-family: 'Outfit', sans-serif;
-font-size: 800%;
-line-height: 0.8em;
-font-weight: 200;
-margin-bottom: 3%;
+h1 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 500%;
+  line-height: 0.8em;
+  font-weight: 200;
 }
 
 
 /*SECTION*/
-section{font-family: 'Inter', sans-serif;
-padding-bottom:1.5%;
+section {
+  font-family: 'Inter', sans-serif;
+  padding-bottom: 1.5%;
 }
-section h2{color: #C2128D;
-font-size: 350%;
-margin-bottom: 0;
+
+section h2 {
+  color: #C2128D;
+  font-size: 200%;
+  margin-bottom: 0;
 
 }
-section p{padding-bottom: 2%;
-font-size: 170%;
-margin-top: 0.7%;}
-ul{line-height: 1.7em;
-padding-bottom: 2.5%;
-font-size: 180%;}
+
+section p {
+  padding-bottom: 2%;
+  font-size: 160%;
+  margin-top: 0.7%;
+}
+
+ul {
+  line-height: 1.7em;
+  padding-bottom: 2.5%;
+  font-size: 160%;
+}
 
 /*FOOTER*/
 
@@ -52,43 +63,54 @@ font-size: 180%;}
 
 
 .custom-checkbox {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-   background-image: url(../images/bg.jpg);/* Colore di sfondo*/
-   background-position: center;
-   border: 4px solid white;/* di default;*/
-  }
-  
-  input[type="checkbox"] {
-    display: none; /* Nasconde il checkbox di default */
-  }
-  
-  input[type="checkbox"]:checked + .custom-checkbox {
-    background-image: url(../images/image_processing20200511-10310-15y6mf2.png);/* Cambia il colore di sfondo quando il checkbox è selezionato */
-    background-position: center;
-    background-size: contain;
-  }
-
-  
-
-footer{font-family: 'Inter', sans-serif;
-padding-bottom: 10%;}
-footer p{display: inline;
-font-size: 130%;
-font-weight: 600;
-padding-left: 1em;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url(../images/bg.jpg);
+  /* Colore di sfondo*/
+  background-position: center;
+  border: 4px solid white;
+  /* di default;*/
 }
 
-button{font-weight: bold;
-    font-size: 1.5em;
-    padding: 0.3em 1.6em;
-    margin-left: 5%;
-    font-weight: bold;
-    font-size: 1.5em;
-background-color: #00FFFF;
-font-size: 250%;
-box-shadow: -1px 0px 20px 20px #00feff4d;
+input[type="checkbox"] {
+  display: none;
+  /* Nasconde il checkbox di default */
+}
+
+input[type="checkbox"]:checked+.custom-checkbox {
+  background-image: url(../images/image_processing20200511-10310-15y6mf2.png);
+  /* Cambia il colore di sfondo quando il checkbox è selezionato */
+  background-position: center;
+  background-size: contain;
+}
 
 
+
+footer {
+  font-family: 'Inter', sans-serif;
+  padding-bottom: 10%;
+}
+
+form {
+  display: flex;
+  align-items: center;
+}
+
+footer p {
+  display: inline;
+  font-size: 130%;
+  font-weight: 600;
+  padding-left: 1em;
+}
+
+button {
+  color: #0b113b;
+  padding: 0.6em 1.8em;
+  margin-left: 20%;
+  font-weight: bold;
+  background-color: #00FFFF;
+  font-size: 200%;
+  box-shadow: 0px 0px 20px 10px #00feff4d;
+  border: transparent;
 }
