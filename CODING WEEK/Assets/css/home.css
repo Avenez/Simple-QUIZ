@@ -157,6 +157,18 @@ button {
   padding: 0.6em 1.8em;
   margin-left: 20%;
   font-weight: bold;
+  /* background-color: #00FFFF; */
+  background-color: #575d5d80;
+  font-size: 200%;
+  /* box-shadow: 0px 0px 20px 10px #00feff4d; */
+  border: transparent;
+}
+
+.buttonCheked{
+  color: #0b113b;
+  padding: 0.6em 1.8em;
+  margin-left: 20%;
+  font-weight: bold;
   background-color: #00FFFF;
   font-size: 200%;
   box-shadow: 0px 0px 20px 10px #00feff4d;
