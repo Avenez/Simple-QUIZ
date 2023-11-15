@@ -97,7 +97,7 @@ transform: scale(-1, 1);
 
 .chart-wrapper {
   padding: 30px;
-  width: 40%;
+  min-width: 640px;
   margin: 0;
   position: relative;
 }
@@ -186,10 +186,6 @@ transform: scale(-1, 1);
     align-items: center;
     gap: 24px;
     margin: 54px 0;
-  }
-
-  .chart-wrapper {
-    width: 100%;
   }
 
   .results-container {
