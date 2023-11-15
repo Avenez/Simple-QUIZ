@@ -117,11 +117,11 @@ transform: scale(-1, 1);
   text-align: center;
   text-wrap:wrap;
   word-wrap: break-word;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .chart-text-wrapper b {
-  font-size: 20px;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
