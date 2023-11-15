@@ -74,9 +74,12 @@ ul {
   display: flex;
   align-items: center;
   margin-top: 4em;
+  width: 75%;
+  justify-content: space-between;
 }
 
 .align {
+  display: flex;
   align-items: center;
 }
 
@@ -102,6 +105,8 @@ input[type="checkbox"]:checked+.custom-checkbox {
   /* Cambia il colore di sfondo quando il checkbox è selezionato */
   background-position: center;
   background-size: contain;
+  background-color: #226699;
+  background-repeat: no-repeat;
 }
 
 
