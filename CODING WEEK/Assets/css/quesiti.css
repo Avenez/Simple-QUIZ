@@ -1,11 +1,12 @@
 body {
-    background-image: url(../img/bg.jpg);
-    background-size: cover;
+    background: rgb(22, 24, 62);
+    background: linear-gradient(120deg, rgba(22, 24, 62, 1) 0%, rgba(22, 24, 62, 1) 44%, rgba(91, 41, 103, 1) 52%, rgba(67, 35, 89, 1) 56%, rgba(64, 34, 87, 1) 60%, rgba(110, 46, 115, 1) 67%, rgba(77, 38, 95, 1) 75%, rgba(110, 46, 115, 1) 82%, rgba(101, 44, 110, 1) 84%, rgba(22, 24, 62, 1) 90%);
     background-repeat: no-repeat;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
     line-height: 1.65;
     background-color: #666666;
+    height: 100vh;
 }
 
 /* Sezione header */
@@ -15,7 +16,7 @@ header {
 }
 
 header span img {
-    width: 12%;
+    width: 17%;
     margin-left: 5%;
     margin-top: 2%;
 }
@@ -107,11 +108,11 @@ aside h3 span {
 
 .stileDomanda:hover {
     background-color: #d20094;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .right {
-    background-color:#33be3e !important;
+    background-color: #33be3e !important;
 }
 
 .wrong {
