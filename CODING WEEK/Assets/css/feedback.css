@@ -75,3 +75,7 @@ p {
     cursor: pointer;
     box-shadow: 0 0 30px #00FFFF;
 }
+
+input:focus-visible {
+    outline: 0;
+}
