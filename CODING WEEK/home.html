@@ -1,34 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>welcome page</title>
     <link rel="stylesheet" href="Assets/css/home.css">
 </head>
+
 <body>
     <header>
-    <img class="logo" src="Assets/images/epicode_logo.png">
-    </header> 
+        <img class="logo" src="Assets/images/epicode_logo.png">
+    </header>
     <main>
         <h1>Welcome to<br> <span>your exam</span></h1>
     </main>
     <section>
         <h2>Instructions</h2>
-    <p>We don't expect most engineers to know the answers to all of these<br> questions, so don't worry if you're unsure of a few of them.</p>
-    <ul>
-        <li>Each question is <span>timed</span> and can only be <span>answered once.</span></li>
-        <li>Changing browser tab or opening other windows will invalidate the question.</li>
-        <li>This exam will take approx.<span>0-5 minutes.</span></li>
-    </ul>
-    </section>    
+        <p>We don't expect most engineers to know the answers to all of these<br> questions, so don't worry if you're
+            unsure of a few of them.</p>
+        <ul>
+            <li>Each question is <span>timed</span> and can only be <span>answered once.</span></li>
+            <li>Changing browser tab or opening other windows will invalidate the question.</li>
+            <li>This exam will take approx.<span>0-5 minutes.</span></li>
+        </ul>
+    </section>
     <footer>
+
         <form action="quesiti.html">
-            <input type="checkbox" id="myCheckbox" required>
-            <label for="myCheckbox" class="custom-checkbox"></label>
-            <p> I promise to answer myself without help from anyone </p>
-            <button>PROCEED</button>
-       </form>
+            <div class="contenitore">
+                <h3>Select difficulty</h3>
+                <h3>Select Argument</h3>
+            </div>
+            <div class="contenitore">
+                <div class="seleziona">
+                    <input type="radio" id="facile">
+                    <label for="facile">Facile</label>
+                    <br>
+                    <input type="radio" id="media">
+                    <label for="media">Media</label>
+                    <br>
+                </div>
+
+                <div class="seleziona">
+                    <input type="radio" id="categoriaFacile">
+                    <label for="facile">Facile</label>
+                    <br>
+                    <input type="radio" id="categoriaMedia">
+                    <label for="media">Media</label>
+                    <br>
+                </div>
+            </div>
+            <br>
+            <div class="procedi">
+                <div class="align">
+                    <input type="checkbox" id="myCheckbox" required>
+                    <label for="myCheckbox" class="custom-checkbox"></label>
+                    <p> I promise to answer myself without help from anyone </p>
+                </div>
+                <button>PROCEED</button>
+            </div>
+        </form>
     </footer>
 </body>
+
 </html>
