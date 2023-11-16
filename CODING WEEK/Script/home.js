@@ -3,8 +3,10 @@ let checkBox = document.getElementsByTagName('input');
 
 button.disabled = true;
 const illumina = function(){
-    button[0].classList.toggle('buttonCheked');
-    button.disabled = false;
+    if (checkBox[4].checked == true && (checkBox[0].checked == true || checkBox[1].checked == true) && (checkBox[2].checked == true || checkBox[3].checked == true)) {
+        button[0].classList.toggle('buttonCheked');
+        button.disabled = false;
+    }
 }
 
 const spegni = function(){
