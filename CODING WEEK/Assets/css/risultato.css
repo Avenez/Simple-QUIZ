@@ -12,9 +12,6 @@ body {
   font-size: 1.2rem;
   line-height: 1.65;
   min-height: 100vh;
-  /* background-image: url('../images/bg.jpg');
-  background-repeat: no-repeat;
-  background-size: cover; */
   background: rgb(22,24,62);
   background: linear-gradient(120deg, rgba(22,24,62,1) 0%, rgba(22,24,62,1) 44%, rgba(91,41,103,1) 52%, rgba(67,35,89,1) 56%, rgba(64,34,87,1) 60%, rgba(110,46,115,1) 67%, rgba(77,38,95,1) 75%, rgba(110,46,115,1) 82%, rgba(101,44,110,1) 84%, rgba(22,24,62,1) 90%);
   color: white;
@@ -41,7 +38,6 @@ body > h3{
 }
 
 h3 {
-  /* margin-top: 20px; */
   font-family: 'Outfit', sans-serif;
   font-size: 60px;
   font-weight: 700;
