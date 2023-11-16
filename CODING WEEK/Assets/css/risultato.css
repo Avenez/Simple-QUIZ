@@ -79,8 +79,8 @@ section h3 {
 .num {
   margin-top: -60px;
   font-size: 18px;
-
 }
+
 /* ----------------CERCHIO-------------------- */
 .flip{
 -moz-transform: scale(-1, 1);
@@ -173,11 +173,6 @@ transform: scale(-1, 1);
   }
 }
 
-
-.percentage {
-  fill: #666;
-  text-anchor: middle;
-}
 
 @media screen and (max-width: 840px) {
   section {
