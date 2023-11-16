@@ -153,6 +153,7 @@ footer p {
 }
 
 button {
+  cursor: pointer;
   color: #0b113b;
   padding: 0.6em 1.8em;
   margin-left: 20%;
