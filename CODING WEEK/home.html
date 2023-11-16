@@ -33,18 +33,18 @@
             </div>
             <div class="contenitore">
                 <div class="seleziona">
-                    <input type="radio" id="categoriaComputer" name="category" value="0" required>
+                    <input type="radio" id="categoriaComputer" name="category" value="0" required onchange="illumina()">
                     <label for="categoriaComputer">Science: computer</label>
                     <br>
-                    <input type="radio" id="categoriaOnePiece" name="category" value="1">
+                    <input type="radio" id="categoriaOnePiece" name="category" value="1" onchange="illumina()">
                     <label for="categoriaOnePiece">One Piece</label>
                     <br>
                 </div>
                 <div class="seleziona">
-                    <input type="radio" id="facile" name="level" value="easy" required>
+                    <input type="radio" id="facile" name="level" value="easy" required onchange="illumina()">
                     <label for="facile">Easy</label>
                     <br>
-                    <input type="radio" id="media" name="level" value="medium">
+                    <input type="radio" id="media" name="level" value="medium" onchange="illumina()">
                     <label for="media">Medium</label>
                     <br>
                 </div>
