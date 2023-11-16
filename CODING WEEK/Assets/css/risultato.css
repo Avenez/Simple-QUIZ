@@ -153,8 +153,7 @@ transform: scale(-1, 1);
   justify-content: center;
 }
 
-
-.circular-chart.epicBlue .circle {
+.circle {
   stroke: #00ffff;
   stroke-width: 4;
 }
