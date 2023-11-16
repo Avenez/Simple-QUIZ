@@ -36,6 +36,10 @@ header img {
     margin-top: 2%;
 }
 
+body > h3{
+  text-align: center;
+}
+
 h3 {
   /* margin-top: 20px; */
   font-family: 'Outfit', sans-serif;
