@@ -1,12 +1,12 @@
 // Timer 60 secondi
 
-var width = 200,
+var width = 200, //Specificano le dimensioni del contenitore SVG.
   height = 200,
-  timePassed = 0,
-  timeLimit = 60;
+  timePassed = 0, // tiene traccia del tempo trascorso.
+  timeLimit = 60; //è il limite di tempo per il timer.
 
 var fields = [
-  {
+  {                      //Un array che che contiene i campi del timer ed una funzione update. 
     value: timeLimit,
     size: timeLimit,
     update: function () {
@@ -15,42 +15,42 @@ var fields = [
   },
 ];
 
-var arc = d3.svg
+var arc = d3.svg                     //L'arco del timer con un'area colorata proporzionale al tempo trascorso rispetto al tempo totale.
   .arc()
-  .innerRadius(width / 3 - 20) //Richiama la libreria d3 e usa l'oggetto arc (arco) [La variabile arc viene creata utilizzando D3.js per definire le proprietà dell'arco circolare.]
-  .outerRadius(width / 3 - 10) //ampienza
-  .startAngle(2 * Math.PI) //Angolo di partenza 360°
+  .innerRadius(width / 3 - 20)      //Richiama la libreria d3 e usa l'oggetto arc (arco) [La variabile arc viene creata utilizzando D3.js per definire le proprietà dell'arco circolare.]
+  .outerRadius(width / 3 - 10)     //Ampienza (spessore del cerchio)
+  .startAngle(2 * Math.PI)        //Angolo di partenza 360°
   .endAngle(function (d) {
-    return (d.value / d.size) * 2 * Math.PI; //Angolo di fine
+    return (d.value / d.size) * 2 * Math.PI; //Angolo di fine in base al tempo trascorso. Essendo che l'arco va diminuendo l'angolo si abbassa ad ogni secondo
   });
 
-var svg = d3
+var svg = d3                //Seleziona l'elemento con la classe "container" e aggiunge un elemento SVG con larghezza e altezza specificate.
   .select(".container")
-  .append("svg") //Seleziona il container e gli "appende" l'SVG che si aggiorna
+  .append("svg") 
   .attr("width", width)
   .attr("height", height);
 
-var field = svg
-  .selectAll(".field") //I dati dell'array fields vengono associati a una selezione di gruppi (elementi g) all'interno dell'SVG.
-  .data(fields)
+var field = svg         //Utilizziamo le funzioni della libreria D3 per associare i dati e creare un gruppo all'interno dell'SVG per contenere gli elementi del timer
+  .selectAll(".field") 
+  .data(fields)        //I dati dell'array fields vengono associati al gruppo "g" all'interno dell'SVG.
   .enter()
-  .append("g")
-  .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")")
+  .append("g")        //append("g") inserisce nel gruppo "g" dell'SVG le forme (back e path) e i contenuti(label) 
+  .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")")  //.attr() permette di settare gli attributi di un elemento. In questo caso pone il centro del cerchio al centro del contenitore
   .attr("class", "field");
 
 var back = field
   .append("path") //"back" e "path" vengono creati come percorsi di sfondo e primo piano, rispettivamente, utilizzando l'arco definito in precedenza.
   .attr("class", "path path--background")
-  .attr("d", arc);
+  .attr("d", arc); //L'arributo ("d", arc) sta dicendo all'elemento <path> di utilizzare il percorso definito dalla funzione arc come il percorso grafico da disegnare. 
 
 var path = field
   .append("path") //"back" e "path" vengono creati come percorsi di sfondo e primo piano, rispettivamente, utilizzando l'arco definito in precedenza.
   .attr("class", "path path--foreground");
 
-var label = field
-  .append("text") //"label" è un elemento di testo che visualizzerà il tempo rimanente.
-  .attr("class", "label")
-  .attr("dy", ".35em");
+var label = field  //Viene aggiunto un elemento di testo (<text>) per visualizzare il tempo rimanente
+  .append("text") //"label" è un elemento di testo che visualizzerà il tempo rimanente.  Il metodo append() inserisce il contenuto specificato alla fine delll'elemento field
+  .attr("class", "label")  
+  .attr("dy", ".35em");    //L'attributo dy indica uno spostamento lungo l'asse y della posizione di un elemento o del suo contenuto.
 
 console.log(fields);
 
@@ -66,15 +66,16 @@ function arcTween(b) {
     return arc(i(t));
   };
 }
-
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 const resetTimer = function (a) {
   //Resetta il timer quando si passa alla domanda successiva
   timePassed = 0;
   update();
 };
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+//Array delle domande
 const questions = [
-  //Array delle domande
   {
     category: "Science: Computers",
     type: "multiple",
@@ -479,8 +480,8 @@ const questions = [
     ],
   },
 ];
-
-const search = document.location.search.split("&"); //Crea Array di stringhe formato da (http://127.0.0.1:5500/quesiti.html?category=0&level=easy) ["?category=0" , "level=easy"]
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+const search = document.location.search.split("&"); //Crea Array di stringhe formato dall'ultima porzione di (http://127.0.0.1:5500/quesiti.html?category=0&level=easy) ["?category=0" , "level=easy"]
 
 if (search[0].slice(10) == 0) {
   //Seleziono categoria e difficoltà usando slice sull'Array "serch"
@@ -495,7 +496,7 @@ const selectedQuestions = questions.filter((question) => {
 });
 
 console.log(selectedQuestions);
-
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 var numeroDomanda = 0;
 var results = 0;
 
@@ -569,7 +570,7 @@ const nextQuestion = function () {
     document.getElementById("hiddenResults").submit();
   }
 };
-
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 const controlloRisposta = function (e) {
   if (e.target.classList.contains("rispostaGiusta")) {  //Usiamo l'oggetto "e" per controllare che il target della risposta sia corretta
     results++;
@@ -591,7 +592,7 @@ const controlloRisposta = function (e) {
   }
   console.log(results);
 };
-
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 const evento = function () {
   const risposte = document.querySelectorAll("div p");                  //seleziono tutti i p dal DOM
   for (i = 0; i < risposte.length; i++) {                               //Ad ognuno aggiungo un "EventListener" che al click lancia le funzioni create
@@ -604,9 +605,9 @@ const evento = function () {
   }
 };
 
-
-function update() {                                                    //Funzione di update del timer 
-  field.each(function (d) {                                            //La funzione update itera su ogni elemento presente nella selezione field
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+function update() {                                                    //Funzione di update del timer che è autoinvocante
+  field.each(function (d) {                                            //La funzione update itera su ogni elemento presente nella selezione field in modo da ripetersi ogni secondo
     (d.previous = d.value), (d.value = d.update(timePassed));          //d.previous memorizza il valore precedente di "d.value" e "d.value" viene aggiornato chiamando la funzione update con il parametro timePassed.
   });
 
@@ -617,14 +618,27 @@ function update() {                                                    //Funzion
   });
 
   if (timePassed <= timeLimit)
-    Timeout = setTimeout(update, 1000 - (timePassed % 1000));        //Se il tempo trascorso (timePassed) è inferiore al limite di tempo (timeLimit): Viene impostato un timeout con la funzione update che verrà richiamata ogni secondo (1000 - (timePassed % 1000) regola la chiamata per allineare gli aggiornamenti al secondo).
+    Timeout = setTimeout(update, 1000 - (timePassed % 1000));        //Se il tempo trascorso (timePassed) è inferiore al limite di tempo (timeLimit)[cioè se il tempo non è scaduto]: Viene impostato un timeout con la funzione update che verrà richiamata ogni secondo (1000 - (timePassed % 1000) regola l'invocazione della funzione ogni secondo).
   else {                                                             //Viene chiamata la funzione nextQuestion.Viene chiamata la funzione resetTimer per azzerare il timer.
     nextQuestion();
     resetTimer();
   }
   console.log(fields[0]);
 }
-
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 nextQuestion();                                                         //Lancio la funzione di creazione delle domande per creare la prima domanda 
 update();
 evento();
+
+
+
+/*var seconds = 60;
+  var display = document.getElementById('timer');
+  var intervalId = setInterval(function () {
+    seconds--;
+    display.textContent = seconds;
+    if (seconds <= 0) {
+      clearInterval(intervalId);
+      display.textContent = 'Tempo scaduto!';
+    }
+  }, 1000);*/
